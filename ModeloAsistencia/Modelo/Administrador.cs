@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ModeloAsistencia.Modelo
+{
+    public class Administrador
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int AdministradorID { get; set; }
+
+        [Required]
+        [StringLength(60)]
+        public string CorreoAdmin { get; set; }
+
+        [Required]
+        public string ContraseñaHashAdmin { get; set; }
+    }
+}

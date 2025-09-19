@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="SistemaGestionAsistencia.Vistas.VistaInformacionUsuarios"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SistemaGestionAsistencia.Vistas"
+    xmlns:locall="using:SistemaGestionAsistencia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+    mc:Ignorable="d"
+    xmlns:viewmodels="using:SistemaGestionAsistencia.VistaModelo" xmlns:i="using:Microsoft.Xaml.Behaviors"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <UserControl.Resources>
+        <viewmodels:InformacionUsuarioViewModel x:Key="users"/>
+    </UserControl.Resources>
+    
+    
+
+
+    <Grid CornerRadius="20" BorderBrush="#143446" BorderThickness="2" Background="#143446" Margin="20"
+          DataContext="{Binding Source={StaticResource users}}">
+
+
+        <ScrollViewer Margin="20" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
+            <StackPanel CornerRadius="10" Margin="10" >
+
+                <Grid>
+                    <StackPanel>
+                        <!--Línea de división-->
+                        <TextBlock Text="Datos de los Usuarios" Margin="0 30 10 0" HorizontalAlignment="Center" Foreground="White" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold"/>
+                        <Border Height="2" Background="#F6BD3D" HorizontalAlignment="Stretch"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <!-- Fila para la barra horizontal -->
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Margin="10"  HorizontalAlignment="Center" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <!-- Columna para el primer texto -->
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" CornerRadius="15" Width="650">
+                            <!-- Columna 1: Texto y casilla -->
+                            <StackPanel Orientation="Horizontal" Margin="15,0,10,0">
+                                <TextBlock Text="NOMBRE" VerticalAlignment="Center" Margin="0,0,10,0" Foreground="White"/>
+                                <TextBox Text="{Binding TerminoBusqueda,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="450" Margin="5" VerticalAlignment="Center" BorderBrush="#143446" FontSize="20" CornerRadius="20"/>
+                                <SymbolIcon Symbol="Find" HorizontalAlignment="Center" Foreground="White"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                    </Grid>
+                </Grid>
+
+
+                <!-- Datos recabados -->
+
+
+                <Grid DataContext="{Binding Source={StaticResource users}}"
+                    Margin="20">
+
+                    <StackPanel>
+
+                        <Grid HorizontalAlignment="Center" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="1" Background="#F6BD3D" Margin="12" BorderBrush="Black" BorderThickness="1" CornerRadius="5">
+                                <controls:DataGrid x:ConnectionId='2' 
+                                        x:Name="dataGrid"
+                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                                        HorizontalScrollBarVisibility="Visible"
+                                        VerticalScrollBarVisibility="Visible"
+                                        AlternatingRowBackground="Transparent"
+                                        AlternatingRowForeground="SlateGray"
+                                        AreRowDetailsFrozen="False"
+                                        AreRowGroupHeadersFrozen="True"
+                                        AutoGenerateColumns="False"
+                                        CanUserSortColumns="False"
+                                        CanUserReorderColumns="True"
+                                        CanUserResizeColumns="True"
+                                        ColumnHeaderHeight="32"
+                                        MaxColumnWidth="400"
+                                        FrozenColumnCount="0"
+                                        GridLinesVisibility="Horizontal"
+                                        HeadersVisibility="Column"
+                                        IsReadOnly="False"
+                                        RowDetailsVisibilityMode="Collapsed"
+                                        SelectionMode="Extended"
+                                        RowGroupHeaderPropertyNameAlternative="Range"
+                                        ItemsSource="{Binding Datos}"
+                                                                                    
+                                        SelectedItem="{Binding SelectedRow,Mode=TwoWay}">
+
+                                    <controls:DataGrid.Columns>
+                                            <controls:DataGridTextColumn Header="ID" Binding="{Binding EmpleadoID}" />
+                                            <controls:DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                                            <controls:DataGridTextColumn Header="Apellido Paterno" Binding="{Binding ApellidoPaterno}" />
+                                            <controls:DataGridTextColumn Header="Apellido Materno" Binding="{Binding ApellidoMaterno}" />
+                                            <controls:DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" />
+
+                                            <controls:DataGridTextColumn Header="Correo" Binding="{Binding Correo}" />
+                                            <controls:DataGridTextColumn Header="Contraseña" Binding="{Binding ContraseñaHash}"  />
+                                            <controls:DataGridTextColumn Header="Codigo Postal" Binding="{Binding CodigoPostal}" />
+                                            <controls:DataGridTextColumn Header="Fecha de Nacimiento" Binding="{Binding Path=FechaNacimiento}" />
+                                            <controls:DataGridTextColumn Header="Calle" Binding="{Binding Calle}" />
+                                            <controls:DataGridTextColumn Header="Numero Exterior" Binding="{Binding NumeroExterior}" />
+                                            <controls:DataGridTextColumn Header="Colonia" Binding="{Binding Colonia}" />
+                                            <controls:DataGridTextColumn Header="Municipio" Binding="{Binding Municipio}" />
+
+
+                                            <controls:DataGridTextColumn Header="Estado" Binding="{Binding Estado}" />
+                                            <controls:DataGridTextColumn Header="País" Binding="{Binding Pais}" />
+                                            <controls:DataGridTextColumn Header="Sexo" Binding="{Binding Sexo}" />
+                                        </controls:DataGrid.Columns>
+
+                                        
+                                            
+                                </controls:DataGrid>
+
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
+
+                    <!-- Flechas de Siguiente y regresar -->
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <SymbolIcon Symbol="Back" Margin="5" Foreground="White"/>
+                    <TextBlock Text="Siguiente" Margin="5" Foreground="White"/>
+                    <SymbolIcon Symbol="Forward" Margin="5" Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+       
+    </Grid>
+    
+</Page>
+

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SistemaGestionAsistencia (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "SistemaGestionAsistencia (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

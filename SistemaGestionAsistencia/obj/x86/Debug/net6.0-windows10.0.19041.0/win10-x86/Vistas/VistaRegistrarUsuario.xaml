@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="SistemaGestionAsistencia.Vistas.VistaRegistrarUsuario"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SistemaGestionAsistencia.Vistas"
+    xmlns:locall="using:SistemaGestionAsistencia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:viewmodels="using:SistemaGestionAsistencia.VistaModelo"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <UserControl.Resources>
+        <viewmodels:RegistrarUsuarioViewModel x:Key="users"/>
+    </UserControl.Resources>
+
+    <ScrollViewer Margin="20">
+        <StackPanel CornerRadius="20" BorderBrush="#143446" BorderThickness="2" Background="#143446">
+            <!--Área del titulo principal-->
+            <Grid Margin="20" >
+                <StackPanel>
+                    <TextBlock Text="Datos Generales" Margin="0 30 10 0" HorizontalAlignment="Center" Foreground="White" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold"/>
+                    <Border Height="2" Background="#F6BD3D" HorizontalAlignment="Stretch"/>
+                </StackPanel>
+            </Grid>
+
+            <!--Área de datos generales de un nuevo Usuario-->
+            <Grid DataContext="{Binding Source={StaticResource users}}">
+                <StackPanel>
+                    <Grid>
+                        <!-- Columnas Para los datos-->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="1" Grid.Row="1" Margin="20">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Contenedor de campos 1ra columna-->
+                                <StackPanel Grid.Column="1" Margin="5">
+                                    <TextBox x:ConnectionId='9' x:Name="txtNomU" PlaceholderText="Nombre" Margin="0 0 0 10"  BorderBrush="#143446"
+                                             Text="{Binding Dato.Nombre, Mode=TwoWay}"/>
+                                    <TextBox x:ConnectionId='10' x:Name="txtAppP" PlaceholderText="Apellido Paterno" Margin="0 0 0 10" BorderBrush="#143446"
+                                             Text="{Binding Dato.ApellidoPaterno, Mode=TwoWay}"/>
+                                    <TextBox x:ConnectionId='11' x:Name="txtAppM" PlaceholderText="Apellido Materno" Margin="0 0 0 10" BorderBrush="#143446"
+                                             Text="{Binding Dato.ApellidoMaterno, Mode=TwoWay}"/>
+                                    <TextBox x:ConnectionId='12' x:Name="txtTelU" PlaceholderText="Teléfono" Margin="0 0 0 10" BorderBrush="#143446"
+                                             Text="{Binding Dato.Telefono, Mode=TwoWay}"/>
+                                    <TextBox x:ConnectionId='13' x:Name="txtCorreoU" PlaceholderText="Correo" Margin="0 0 0 10" BorderBrush="#143446"
+                                             Text="{Binding Dato.Correo, Mode=TwoWay}"/>
+                                    <TextBox x:ConnectionId='14' x:Name="txtContraseña" PlaceholderText="Contraseña" Margin="0 0 0 10" BorderBrush="#143446"
+                                             Text="{Binding Dato.ContraseñaHash, Mode=TwoWay}"/>
+                                    <TextBox x:ConnectionId='15' x:Name="txtCPU" PlaceholderText="Codigo Postal"  Margin="0 0 0 10" BorderBrush="#143446"
+                                             Text="{Binding Dato.CodigoPostal, Mode=TwoWay}"/>
+                                    <TextBox x:ConnectionId='16' x:Name="txtCalleU" PlaceholderText="Calle"  Margin="0 0 0 10" BorderBrush="#143446"
+                                             Text="{Binding Dato.Calle, Mode=TwoWay}"/>
+                                    <StackPanel>
+                                        <TextBlock Text="Fecha de Nacimiento" Margin="0 0 0 10" HorizontalAlignment="Center"/>
+                                        <DatePicker x:ConnectionId='17' x:Name="datePicker" HorizontalAlignment="Center" 
+                                                    
+                                                    SelectedDate="{Binding FechaNacimiento2, Mode=TwoWay}"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <!-- Contenedor de campos 2da columna-->
+                                <StackPanel Grid.Column="2" Margin="5">
+
+                                    <!-- Combo box (Pais) -->
+                                    <ComboBox x:ConnectionId='3' x:Name="cmbPaisU" PlaceholderText="País" SelectedIndex="-1" Margin="0 0 0 10" HorizontalAlignment="Stretch"
+                                               SelectedItem="{Binding PaisSeleccioando, Mode=TwoWay}" SelectedValue="{Binding PaisSeleccioando.PaisNombre, Mode=TwoWay}"
+                                              ItemsSource="{Binding Paises}" DisplayMemberPath="PaisNombre">
+                                        
+                                    </ComboBox>
+
+                                    <!-- Combo box (Estado) -->
+                                    <ComboBox x:ConnectionId='4' x:Name="cmbEstadoU" PlaceholderText="Estado" SelectedIndex="-1" Margin="0 0 0 10" HorizontalAlignment="Stretch" 
+                                              SelectedValuePath="Content" SelectedItem="{Binding EstadoSeleccionado, Mode=TwoWay}" SelectedValue="{Binding Dato.Estado, Mode=TwoWay}"
+                                              ItemsSource="{Binding Estados}" DisplayMemberPath="EstadoNombre">
+                                    </ComboBox>
+
+                                    <!-- Combo box (Ciudad) -->
+                                    <TextBox x:ConnectionId='5' x:Name="txtMunicipio" PlaceholderText="Municipio"  Margin="0 0 0 10" BorderBrush="#143446"
+                                                Text="{Binding Dato.Municipio, Mode=TwoWay}"/>
+
+
+                                    <!-- Combo box (Ciudad) -->
+                                    <TextBox x:ConnectionId='6' x:Name="txtColonia" PlaceholderText="Colonia"  Margin="0 0 0 10" BorderBrush="#143446"
+                                                Text="{Binding Dato.Colonia, Mode=TwoWay}"/>
+                                    
+                                    <!-- Datos -->
+                                    <TextBox x:ConnectionId='7' x:Name="txtNumeroExU" PlaceholderText="Numero Exterior" Margin="0 0 0 10" BorderBrush="#143446" 
+                                             Text="{Binding Dato.NumeroExterior, Mode=TwoWay}"/>
+
+                                    <!-- Combo box (Sexo) -->
+                                    <ComboBox x:ConnectionId='8' x:Name="cmbSexU" PlaceholderText="Sexo" SelectedIndex="-1" Margin="0 0 0 10" HorizontalAlignment="Stretch"
+                                              SelectedValuePath="Content" SelectedValue="{Binding Dato.Sexo, Mode=TwoWay}">
+                                        <ComboBoxItem Content="Masculino" />
+                                        <ComboBoxItem Content="Femenino" />
+                                        <ComboBoxItem Content="No binario" />
+                                    </ComboBox>
+
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+
+            <!--Área del Boton-->
+
+            <Grid DataContext="{Binding Source={StaticResource users}}"
+                HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button x:ConnectionId='2' Content="Registrar" x:Name="BtnRegistrarU" Background="#F6BD3D" Width="200" Height="45" FontSize="20" FontFamily="Times New Roman" BorderBrush="Black" BorderThickness="1"
+                        Command="{Binding AddCommand}"/>
+            </Grid>
+
+            <!--Nota: La U mayuscula al final de cada nombre del campo representa la U de usuario-->
+            <!--Nota: Si tu computadora tiene tema Oscuro, los colores se apreciaran de forma distinta, para preciarlos de forma correcta, usa el tono claro-->
+
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

@@ -1,0 +1,42 @@
+C:\Users\User\Downloads\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.deps.json
+C:\Users\User\Downloads\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.dll
+C:\Users\User\Downloads\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.pdb
+C:\Users\User\Downloads\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.csproj.AssemblyReference.cache
+C:\Users\User\Downloads\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Downloads\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.AssemblyInfoInputs.cache
+C:\Users\User\Downloads\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.AssemblyInfo.cs
+C:\Users\User\Downloads\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.dll
+C:\Users\User\Downloads\ModeloAsistencia\obj\Debug\net6.0\refint\ModeloAsistencia.dll
+C:\Users\User\Downloads\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.pdb
+C:\Users\User\Downloads\ModeloAsistencia\obj\Debug\net6.0\ref\ModeloAsistencia.dll
+C:\Users\User\Downloads\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.runtimeconfig.json
+C:\Users\User\Downloads\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.genruntimeconfig.cache
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.deps.json
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.runtimeconfig.json
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.dll
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.pdb
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.csproj.AssemblyReference.cache
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.AssemblyInfoInputs.cache
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.AssemblyInfo.cs
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.dll
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\refint\ModeloAsistencia.dll
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.pdb
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.genruntimeconfig.cache
+C:\Users\User\Downloads\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ref\ModeloAsistencia.dll
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.deps.json
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.runtimeconfig.json
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.dll
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\bin\Debug\net6.0\ModeloAsistencia.pdb
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.csproj.AssemblyReference.cache
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.AssemblyInfoInputs.cache
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.AssemblyInfo.cs
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.dll
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\refint\ModeloAsistencia.dll
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.pdb
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ModeloAsistencia.genruntimeconfig.cache
+C:\Users\Gabriel Velasco Diaz\Desktop\PorgramaBase\ModeloAsistencia\obj\Debug\net6.0\ref\ModeloAsistencia.dll
